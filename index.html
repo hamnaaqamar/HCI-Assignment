@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCI Live Search | CS272</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glass-container">
+        <header>
+            <h1>Lexicon <span class="badge">Pro</span></h1>
+            <p class="subtitle">CS272 Human-Computer Interaction</p>
+        </header>
+
+        <div class="search-wrapper">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchInput" placeholder="Search dictionary..." autocomplete="off">
+            <button id="clearBtn" class="clear-btn"><i class="fas fa-times"></i></button>
+        </div>
+
+        <div class="stats-bar">
+            <span id="resultCount">Loading words...</span>
+            <div class="status-indicator" id="statusDot"></div>
+        </div>
+
+        <div class="list-container">
+            <ul id="wordList" class="styled-list"></ul>
+            <div id="noResults" class="hidden">
+                <i class="fas fa-search-minus"></i>
+                <p>No matches found.</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
