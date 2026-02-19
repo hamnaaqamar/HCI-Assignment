@@ -3,36 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HCI Live Search | CS272</title>
+    <title>Lookup | Cozy Search</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="glass-container">
-        <header>
-            <h1>Lexicon <span class="badge">Pro</span></h1>
-            <p class="subtitle">CS272 Human-Computer Interaction</p>
+    <div class="app-wrapper">
+        <header class="main-header">
+            <i class="fas fa-seedling leaf-icon"></i>
+            <h1>Lookup</h1>
+            <p>Find your favorite words in our cozy nook.</p>
         </header>
 
-        <div class="search-wrapper">
-            <i class="fas fa-search search-icon"></i>
-            <input type="text" id="searchInput" placeholder="Search dictionary..." autocomplete="off">
-            <button id="clearBtn" class="clear-btn"><i class="fas fa-times"></i></button>
-        </div>
-
-        <div class="stats-bar">
-            <span id="resultCount">Loading words...</span>
-            <div class="status-indicator" id="statusDot"></div>
-        </div>
-
-        <div class="list-container">
-            <ul id="wordList" class="styled-list"></ul>
-            <div id="noResults" class="hidden">
-                <i class="fas fa-search-minus"></i>
-                <p>No matches found.</p>
+        <main class="card">
+            <div class="search-area">
+                <div class="input-group">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search the collection..." autocomplete="off">
+                </div>
+                <div class="counter-pill">
+                    <span id="resultCount">Gathering words...</span>
+                </div>
             </div>
-        </div>
+
+            <div class="list-wrapper">
+                <ul id="wordList"></ul>
+                <div id="noResults" class="hidden">
+                    <div class="empty-illustration">
+                        <i class="fas fa-wind"></i>
+                        <p>Aww, nothing here!</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="hci-note">
+            Built for CS272 • Interaction Design
+        </footer>
     </div>
     <script src="script.js"></script>
 </body>
